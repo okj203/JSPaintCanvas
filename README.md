@@ -13,7 +13,7 @@ Users will be able to:
 
 Wireframe
 
-
+![Wireframe](https://i.imgur.com/NYPG4gm.png)
 
  Technologies
  - JavaScript for canvas that registers users' movements of the brush and color choices
