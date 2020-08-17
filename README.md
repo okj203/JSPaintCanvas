@@ -1,4 +1,4 @@
-# PaintCanvas
+# JSPaintCanvas
 
 Users can paint in different colors, using different sizes of brushes and save their work
 
