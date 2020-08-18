@@ -1,0 +1,24 @@
+{
+  "name": "JSPaintCanvas",
+  "version": "1.0.0",
+  "description": "Users can paint in different colors, using different sizes of brushes and save their work",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okj203/JSPaintCanvas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okj203/JSPaintCanvas/issues"
+  },
+  "homepage": "https://github.com/okj203/JSPaintCanvas#readme",
+  "dependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
