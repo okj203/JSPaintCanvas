@@ -3,12 +3,16 @@ const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jscolor");
 const range = document.getElementById("range"); // id="range"
 const mode = document.getElementById("mode");
+const save = document.getElementById("save");
 
 const INITIAL_COLOR = "black";
 const CANVAS_SIZE = 750;
 
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
+
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
@@ -65,12 +69,25 @@ function handleCanvasClick() {
   }
 }
 
+function handleCM(e) {
+  e.preventDefault(); // right click menu won't show up
+}
+
+function handleSaveClick() {
+  const image = canvas.toDataURL("image/jpeg"); //png by default
+  const link = document.createElement("a"); // create an a tag with the link of the image as "download" attr
+  link.href = image;
+  link.download = "🎨JSPaintCanvas";
+  link.click();
+}
+
 if (canvas) {
   canvas.addEventListener("mousemove", onMouseMove);
   canvas.addEventListener("mousedown", startPainting);
   canvas.addEventListener("mouseup", stopPainting);
   canvas.addEventListener("mouseleave", stopPainting);
   canvas.addEventListener("click", handleCanvasClick);
+  canvas.addEventListener("contextmenu", handleCM);
 }
 
 Array.from(colors).forEach((color) =>
@@ -83,4 +100,8 @@ if (range) {
 
 if (mode) {
   mode.addEventListener("click", handleModeClick);
+}
+
+if (save) {
+  save.addEventListener("click", handleSaveClick);
 }
