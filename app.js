@@ -74,7 +74,8 @@ function handleCM(e) {
 }
 
 function handleSaveClick() {
-  const image = canvas.toDataURL("image/jpeg"); //png by default
+  // const image = canvas.toDataURL("image/jpeg"); //png by default
+  const image = canvas.toDataURL(); //png by default
   const link = document.createElement("a"); // create an a tag with the link of the image as "download" attr
   link.href = image;
   link.download = "🎨JSPaintCanvas";
