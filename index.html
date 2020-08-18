@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
     <title>JSPaintCanvas</title>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="canvasId" class="canvasClass"></canvas>
+    <div class="controller">
+      <div class="control-brush">
+        <input
+          type="range"
+          id="range"
+          min="0.1"
+          max="10.0"
+          value="5.0"
+          step="0.1"
+        />
+      </div>
+      <div class="control-btn">
+        <button id="mode">FILL</button>
+        <button id="save">SAVE</button>
+      </div>
+      <div id="colorsId" class="color-controller">
+        <div class="color-controller jscolor" style="background-color: black;"></div>
+        <div class="color-controller jscolor" style="background-color: grey;"></div>
+        <div class="color-controller jscolor" style="background-color: white;"></div>
+        <div class="color-controller jscolor" style="background-color: red;"></div>
+        <div class="color-controller jscolor" style="background-color: orange;"></div>
+        <div class="color-controller jscolor" style="background-color: yellow;"></div>
+        <div class="color-controller jscolor" style="background-color: green;"></div>
+        <div class="color-controller jscolor" style="background-color: blue;"></div>
+        <div class="color-controller jscolor" style="background-color: navy;"></div>
+        <div class="color-controller jscolor" style="background-color: purple;"></div>
+      </div>
+    </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
