@@ -169,11 +169,11 @@ function handleResizeClick(e) {
   if (widthControls.value > window.innerWidth) {
     alert("Too Large");
   } else {
-    canvasWidth = widthControls.value;
-    canvasHeight = heightControls.value;
+    // canvasWidth = widthControls.value;
+    // canvasHeight = heightControls.value;
 
-    // canvas.style.width = widthControls.value + "px";
-    // canvas.style.height = heightControls.value + "px";
+    canvas.style.width = widthControls.value + "px";
+    canvas.style.height = heightControls.value + "px";
 
     initSetting();
   }
