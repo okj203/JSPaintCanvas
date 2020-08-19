@@ -4,14 +4,11 @@
 const canvas = document.getElementById("canvasId");
 const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jscolor");
-
 const myColorContorls = document.querySelector("#jsMyColorControl");
 const myColor = document.querySelector("#jsMyColor");
-
 const range = document.getElementById("range"); // id="range"
 const mode = document.getElementById("mode");
 const save = document.getElementById("save");
-
 const resetBtn = document.querySelector("#jsReset");
 const resizeBtn = document.querySelector("#jsResize");
 const widthControls = document.querySelector("#jsWidth");
@@ -24,8 +21,8 @@ const INITIAL_BG_COLOR = "white";
 const INITIAL_LINE_WIDTH = 5.0;
 
 // Variables
-let canvasWidth = 750;
-let canvasHeight = 750;
+let canvasWidth = 600;
+let canvasHeight = 500;
 let painting = false;
 let filling = false;
 
@@ -169,12 +166,11 @@ function handleResizeClick(e) {
   if (widthControls.value > window.innerWidth) {
     alert("Too Large");
   } else {
-    // canvasWidth = widthControls.value;
-    // canvasHeight = heightControls.value;
-
-    canvas.style.width = widthControls.value + "px";
-    canvas.style.height = heightControls.value + "px";
-
+    // canvas.style.width = widthControls.value + "px";
+    // canvas.style.height = heightControls.value + "px";
+    
+    canvasWidth = widthControls.value;
+    canvasHeight = heightControls.value;
     initSetting();
   }
 }

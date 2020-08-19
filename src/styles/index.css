@@ -1,10 +1,10 @@
 body {
-  background-color: rgb(202, 237, 248);
+  background-color: rgb(212, 241, 250);
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 50px 0px;
+  padding: 30px 0px;
 }
 
 .title {
@@ -14,12 +14,20 @@ body {
 
 .controls {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.control__width, .control__height {
+.text {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.control__width,
+.control__height {
   color: 1px solid rgba(0, 0, 0, 0.08);
   font-size: 15px;
   height: 18px;
@@ -28,16 +36,21 @@ body {
   padding-left: 5px;
 }
 
+.controls__size {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .canvasClass {
-  width: 750px;
-  height: 750px;
+  cursor: crosshair;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .controller {
-  margin-top: 60px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +60,8 @@ body {
   margin-bottom: 30px;
 }
 
-.control-btn button, #jsResize {
+.control-btn button,
+#jsResize {
   all: unset;
   cursor: pointer;
   background-color: white;
@@ -64,8 +78,21 @@ body {
   transform: scale(0.97);
 }
 
+div.color-controller.jscolor.controls__color__clicked {
+  border-color: #0652af;
+  box-shadow: 0px 0px 15px #4195fc;
+}
+
 .controller .color-controller {
   display: flex;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.my {
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .color-controller .color-controller {
@@ -79,3 +106,4 @@ body {
 .controller .control-brush {
   margin-bottom: 25px;
 }
+
