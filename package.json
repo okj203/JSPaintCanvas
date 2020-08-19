@@ -1,11 +1,19 @@
 {
-  "name": "JSPaintCanvas",
+  "name": "jspaintcanvas",
   "version": "1.0.0",
   "description": "Users can paint in different colors, using different sizes of brushes and save their work",
   "main": "app.js",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "webpack:watch": "webpack --watch --config webpack.dev.js",
+    "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
   },
   "repository": {
     "type": "git",
@@ -18,8 +26,25 @@
     "url": "https://github.com/okj203/JSPaintCanvas/issues"
   },
   "homepage": "https://github.com/okj203/JSPaintCanvas#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "fibers": "^5.0.0",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.2"
   }
 }

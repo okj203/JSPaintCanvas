@@ -1,3 +1,5 @@
+// import "./styles/index.scss";
+
 const canvas = document.getElementById("canvasId");
 const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jscolor");
