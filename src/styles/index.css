@@ -1,8 +1,5 @@
 body {
   background-color: rgb(212, 241, 250);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   padding: 30px 0px;
 }
@@ -10,6 +7,12 @@ body {
 .title {
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
 }
 
 .controls {
@@ -36,7 +39,7 @@ body {
   padding-left: 5px;
 }
 
-.controls__size {
+div.controls__size {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -107,3 +110,65 @@ div.color-controller.jscolor.controls__color__clicked {
   margin-bottom: 25px;
 }
 
+/* modal */
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+.container a {
+  padding: 10px;
+  background: teal;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-container {
+  display: block;
+  border-radius: 10px;
+  background: white;
+  position: relative;
+  padding: 30px;
+}
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  outline: none;
+  appearance: none;
+  color: red;
+  background: none;
+  border: 0px;
+  font-weight: bold;
+  cursor: pointer;
+}

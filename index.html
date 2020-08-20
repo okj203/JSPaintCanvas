@@ -11,6 +11,20 @@
     <title>JSPaintCanvas</title>
   </head>
   <body>
+
+    <!--  modal -->
+    <div class="container">
+      <a data-modal="modal-one">About</a>
+    </div>
+    <div class="modal" id="modal-one">
+      <div class="modal-bg modal-exit"></div>
+      <div class="modal-container">
+        <h1>Welcome! 🎨</h1>
+        <h2>Be the next Leonardo da Vinci with JS Paint Canvas today!</h2>
+        <button class="modal-close modal-exit">X</button>
+      </div>
+    </div>
+
     <div class="title">JS PAINT CANVAS</div>
     <div class="controls">
       <div class="controls__size">
@@ -26,7 +40,11 @@
         <button id="jsResize">RESIZE</button>
       </div>
     </div>
-    <canvas id="canvasId" class="canvasClass"></canvas>
+
+      <div class="canvas-container">
+        <canvas id="canvasId" class="canvasClass"></canvas>
+      </div>
+
     <div class="controller">
       <div class="control-brush">
         <input
