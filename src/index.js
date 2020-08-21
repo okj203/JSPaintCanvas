@@ -1,4 +1,5 @@
-// import "./styles/index.scss";
+import "./styles/reset.scss";
+import "./styles/index.scss";
 
 // DOM Elements
 const canvas = document.getElementById("canvasId");
@@ -168,7 +169,7 @@ function handleResizeClick(e) {
   } else {
     // canvas.style.width = widthControls.value + "px";
     // canvas.style.height = heightControls.value + "px";
-    
+
     canvasWidth = widthControls.value;
     canvasHeight = heightControls.value;
     initSetting();
